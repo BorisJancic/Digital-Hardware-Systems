@@ -100,16 +100,16 @@ module mst(
 
                         state <= STATE_1;
                     end else begin // if i was at the last test case, finish testing
-						done <= 1;
+			done <= 1;
                         state <= DONE;
                     end
                 end
                 DONE: begin
                     done <= 1;
-                    state <= DONE;
+        	    state <= DONE;
                 end
                 default: begin
-					done <= 0;
+		    done <= 0;
                 end
             endcase
         end
