@@ -59,7 +59,7 @@ module mst(
             i <= 0;
             i_lead <= 0;
         end else if (enable) begin
-        	case (state)
+            case (state)
                 INIT: begin // get initial write down the pipeline
                     write_enable <= 1;
                     write_address <= 8'h00;
