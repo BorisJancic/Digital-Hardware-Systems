@@ -4,7 +4,7 @@ module HAM_12(
     output reg[3:0] syndrome
 );
     wire[7:0] data_in;
- 	wire[3:0] C_recv;
+    wire[3:0] C_recv;
     wire[3:0] C_calc;
 
     assign data_in = {
@@ -47,12 +47,11 @@ module HAM_12_TB(
     input[3:0] syndrome,
     output reg[11:0] code
 );
-    initial
-    begin
+    initial begin
         $monitor ($time, "ns code[11:0]=%b, data[7:0]=%b, syndrome[3:0]=%b", code, data, syndrome);
-        		code = 12'b001101001111;
+        	    code = 12'b001101001111;
         	#10 code = 12'b001101001110;
-            #10 code = 12'b001101001101;
+                #10 code = 12'b001101001101;
         	#10 code = 12'b001101001011;
         	#10 code = 12'b001101000111;
         	#10 code = 12'b001101011111;
@@ -63,8 +62,8 @@ module HAM_12_TB(
         	#10 code = 12'b000101001111;
         	#10 code = 12'b011101001111;
         	#10 code = 12'b101101001111;
-			#10
-		$finish;
+		#10
+	$finish;
     end
 endmodule
 
