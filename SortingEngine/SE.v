@@ -78,8 +78,8 @@ module swap_layer #(
         genvar j;
         if (ARRAYLENGTH % 2 == 0) begin // if even sized array
             // directly drive edge values
-        	assign array_out[DATAWIDTH-1:0] = array_mid[DATAWIDTH-1:0];
-    		assign array_out[(DATAWIDTH*ARRAYLENGTH)-1:DATAWIDTH*(ARRAYLENGTH-1)] = array_mid[(DATAWIDTH*ARRAYLENGTH)-1:DATAWIDTH*(ARRAYLENGTH-1)];
+            assign array_out[DATAWIDTH-1:0] = array_mid[DATAWIDTH-1:0];
+    	    assign array_out[(DATAWIDTH*ARRAYLENGTH)-1:DATAWIDTH*(ARRAYLENGTH-1)] = array_mid[(DATAWIDTH*ARRAYLENGTH)-1:DATAWIDTH*(ARRAYLENGTH-1)];
             for (i = 0; i < ARRAYLENGTH; i = i + 2) begin
                 comp_and_swap #(.DATAWIDTH(DATAWIDTH)) u ( // first layer
                     .a_in(array_in[(i+1)*DATAWIDTH-1 : i*DATAWIDTH]),
