@@ -1,6 +1,6 @@
-#Projects for ECE 327, Digital Hardware Systems
+# Projects for ECE 327, Digital Hardware Systems
 
-##Project 1, Hamming Decoder
+## Project 1, Hamming Decoder
 Takes in a 
 
-##Project 2, 
+## Project 2, 
