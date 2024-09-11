@@ -77,10 +77,10 @@ module mst(
                 end
                 STATE_3: begin // read and verify the result, send the next write down the pipline
                     if (i[8] == 0) begin // first bit stores the test case (00 or FF)
-                        t1attempts <= t1attempts + 1;
                         if (read_data != 8'h00) begin
                             t1fails <= t1fails + 1;
                         end
+			t1attempts <= t1attempts + 1;
                     end else if (i[8] == 1) begin
                         if (read_data != 8'hFF) begin
                             t2fails <= t2fails + 1;
