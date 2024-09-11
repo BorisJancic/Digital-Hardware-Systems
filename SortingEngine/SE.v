@@ -33,7 +33,7 @@ module SE #(
     reg[(DATAWIDTH*ARRAYLENGTH)-1:0] swap_in;
     reg[(DATAWIDTH*ARRAYLENGTH)-1:0] swap_out;
     reg initial_valid_in = 0;
-	swap_layer #(
+    swap_layer #(
         .DATAWIDTH(DATAWIDTH),
         .ARRAYLENGTH(ARRAYLENGTH)
     ) swaper (
