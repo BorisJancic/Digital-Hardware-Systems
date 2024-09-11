@@ -49,7 +49,7 @@ module PD(
     output reg pattern2
 );
     parameter Idle=4'b0000, S_px_d0=4'b0001, S_p1_d1=4'b0010, S_p1_d2=4'b0011, S_p1_d3=4'b0100,
-    										 S_p2_d1=4'b0110, S_p2_d2=4'b0111, S_p2_d3=4'b1000;
+    	      S_p2_d1=4'b0110, S_p2_d2=4'b0111, S_p2_d3=4'b1000;
     reg [3:0] state = Idle;
 
     always @(posedge clk) begin
@@ -78,7 +78,7 @@ module PD(
                     case (din)
                         4'b0001: begin
                             state <= S_p1_d3;
-                        	pattern1 <= 1'b1;
+                            pattern1 <= 1'b1;
                         end
                         4'b0000: state <= S_px_d0;
                         default: state <= Idle;
@@ -101,7 +101,7 @@ module PD(
                     case (din)
                         4'b1001: begin
                             state <= S_p2_d3;
-                        	pattern2 <= 1'b1;
+                            pattern2 <= 1'b1;
                         end
                         4'b0000: state <= S_px_d0;
                         default: state <= Idle;
@@ -141,8 +141,7 @@ module top_module ();
     initial
     begin
         clk = 1'b0;
-        forever
-        begin
+        forever begin
             #10 clk = ~clk;
         end
     end
