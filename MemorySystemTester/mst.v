@@ -89,7 +89,7 @@ module mst(
                     end
                     i <= i + 1;
 
-                    if (i != 9'b1_1111_1111) begin // while every test hasn't been complete, move on the next
+			if (i != 9'b1_1111_1111) begin // while every test hasn't been complete, move on to the next
                         write_enable <= 1;
                         write_address[7:0] <= i_lead[7:0];
                         if (i_lead[8] == 0) begin
