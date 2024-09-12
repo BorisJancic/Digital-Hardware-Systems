@@ -5,7 +5,7 @@
 Takes in a 12 bit hamming encoded message  
 Outputs:  
 &nbsp;&nbsp; 8 data bits, with 1-bit error detection  
-&nbsp;&nbsp; 4 bit syndrome detailing which bit contained an error (1 indexed, 0 meaning no error)  
+&nbsp;&nbsp; 4-bit syndrome detailing which bit contained an error (1 indexed, 0 meaning no error)  
 
 
 ## Project 2: Keypad Lock
